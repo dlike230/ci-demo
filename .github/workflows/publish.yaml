@@ -13,7 +13,7 @@ jobs:
       runs-on: ubuntu-latest
       steps:
         - uses: actions/checkout@v2
-        - needs: lint
+          needs: lint
         - uses: JS-DevTools/npm-publish@v1
           with:
             registry: https://npm.pkg.github.com
