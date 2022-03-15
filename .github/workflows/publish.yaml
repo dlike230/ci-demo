@@ -8,6 +8,9 @@ jobs:
       - uses: actions/checkout@v2
       - run: |
           npm install; npm run lint
+  publish:
+      - uses: actions/checkout@v2
+      - needs: lint
       - uses: JS-DevTools/npm-publish@v1
         with:
           registry: https://npm.pkg.github.com
